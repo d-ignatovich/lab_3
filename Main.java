@@ -4,8 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-//  Создание списка записей
-        ArrayList<Record> records = new ArrayList();
+        ArrayList<Record> records = new ArrayList<>();
         records.add(new Record(101, "12", "Иван"));
         records.add(new Record(102, "12", "Алекс"));
         records.add(new Record(103, "4", "Марк"));
@@ -17,8 +16,9 @@ public class Main {
                 System.out.println(rec +" не добавлена. В справочнике уже есть запись с номером телефона " + rec.getPhoneNumber());
             }
         }
-//  Вывод списка всех записей
+
         System.out.println(phoneBook.getAllRecords());
+
 //  Вызов непроверяемого исключения при удалении несуществуещей записи
 //        phoneBook.deleteRecord(111);
 
@@ -29,7 +29,6 @@ public class Main {
         try {
 //  Вызов непроверяемого исключения при изменении несуществуещей записи
 //            phoneBook.updateRecord(new Record(102, "12", "B"));
-//  Изменение данных записи
             phoneBook.updateRecord(new Record(101,"5", "A"));
 //  Вызов проверяемого исключения при изменении записи с внесением неполных данных
 //            phoneBook.updateRecord(new Record(101, null, null));
